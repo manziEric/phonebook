@@ -5,7 +5,7 @@ const InputButton = ({ children }) => {
   const context = useContext(SearchContext);
 
   if (!context) {
-    throw new Error("InputField should be called in SearchField");
+    throw new Error("InputButton should be called in SearchField");
   }
 
   const { searchForEntries } = context;
