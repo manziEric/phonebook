@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { TableContext } from "./DisplayTableData";
+import { GlobalContext } from "../../context/Provider";
 
 const Table = () => {
   //TODO: add style to display table
-  const context = useContext(TableContext);
+  const context = useContext(GlobalContext);
   console.log(context);
   return (
     <table>

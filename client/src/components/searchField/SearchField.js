@@ -1,15 +1,24 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext, useContext } from "react";
 import axios from "axios";
 import DisplayTableData from "../displaySearchResult/DisplayTableData";
+import { GlobalContext } from "../../context/Provider";
+import {
+  GET_SEARCH_RESULT_FOR_TABLE,
+  GET_SEARCH_RESULT_FROM_SERVER,
+} from "../../context/constants";
 
 export const SearchContext = createContext(null);
 
 const SearchField = ({ children }) => {
   const [value, setValue] = useState("");
-  const [phoneNumberData, setPhoneNumberData] = useState([]);
+  const {
+    dispatch,
+    searchState: { data },
+  } = useContext(GlobalContext);
 
+  //TODO: make this in its own file code splitting
   const searchForEntries = () => {
-    phoneNumberData.filter((res) => {
+    data.filter((res) => {
       const { firstName, lastName, phoneNumber } = res;
 
       const search =
@@ -18,7 +27,10 @@ const SearchField = ({ children }) => {
         phoneNumber.includes(value);
 
       if (search) {
-        DisplayTableData({ data: res });
+        dispatch({
+          type: GET_SEARCH_RESULT_FOR_TABLE,
+          payload: { tableData: res },
+        });
       }
       return true;
     });
@@ -28,11 +40,17 @@ const SearchField = ({ children }) => {
   useEffect(() => {
     const fetchDataFromServer = async () => {
       const serverData = await axios.get("/api/phonenumbers");
-      setPhoneNumberData(serverData.data);
+      if (serverData.status === 200) {
+        dispatch({
+          type: GET_SEARCH_RESULT_FROM_SERVER,
+          payload: { data: serverData.data },
+        });
+      }
+      //TODO: dispatch error
     };
 
     fetchDataFromServer();
-  }, []);
+  }, [dispatch]);
 
   return (
     <SearchContext.Provider
