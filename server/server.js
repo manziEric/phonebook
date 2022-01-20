@@ -1,9 +1,12 @@
 import express from "express";
-import data from "./data.js";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import phoneNumberRouter from "./routes/phoneNumbersRoutes.js";
 
 dotenv.config();
+
+const app = express();
+const port = process.env.PORT || 5000;
 
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -14,17 +17,7 @@ mongoose
     console.log(err.message);
   });
 
-const app = express();
-
-const port = process.env.PORT || 5000;
-
-app.get("/api/phonenumbers", (req, res) => {
-  res.send(data.phoneNumbers);
-});
-
-app.get("/", (req, res) => {
-  res.send("server is runniing");
-});
+app.use("/api/phonenumbers", phoneNumberRouter);
 
 app.listen(5000, () => {
   console.log(`Server is running at http://localhost:${port}`);
