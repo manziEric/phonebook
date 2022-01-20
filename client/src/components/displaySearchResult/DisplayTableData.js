@@ -11,8 +11,8 @@ const DisplayTableData = ({ children }) => {
   } = useContext(GlobalContext);
 
   const renderTabledata = () => {
-    return tableData.map(({ id, firstName, lastName, phoneNumber }) => (
-      <tr key={id}>
+    return tableData.map(({ _id, firstName, lastName, phoneNumber }) => (
+      <tr key={_id}>
         <td>{firstName}</td>
         <td>{lastName}</td>
         <td>{phoneNumber}</td>

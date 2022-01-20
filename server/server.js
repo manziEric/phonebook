@@ -17,6 +17,7 @@ mongoose
     console.log(err.message);
   });
 
+app.use(express.json());
 app.use("/api/phonenumbers", phoneNumberRouter);
 
 app.listen(5000, () => {

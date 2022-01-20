@@ -1,5 +1,5 @@
 import express from "express";
-import PhoneNumber from "../models/phoneNumberModel";
+import PhoneNumber from "../models/phoneNumberModel.js";
 
 const phoneNumberRouter = express.Router();
 
@@ -10,9 +10,9 @@ phoneNumberRouter.get("/", async (req, res) => {
 
 phoneNumberRouter.post("/createEntry", async (req, res) => {
   const userEntry = new PhoneNumber({
-    firstName: "lorem",
-    lastName: "ipsum",
-    phoneNumber: "03222255886",
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    phoneNumber: req.body.phoneNumber,
   });
   const createdEntry = await userEntry.save();
 

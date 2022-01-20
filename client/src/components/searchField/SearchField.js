@@ -43,6 +43,7 @@ const SearchField = ({ children }) => {
   useEffect(() => {
     const fetchDataFromServer = async () => {
       const serverData = await axios.get("/api/phonenumbers");
+
       if (serverData.status === 200) {
         dispatch({
           type: GET_SEARCH_RESULT_FROM_SERVER,

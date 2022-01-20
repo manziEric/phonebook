@@ -11,7 +11,7 @@ import SearchField from "../components/searchField/SearchField";
 //TODO: set link to other pages
 //TODO: search on type
 
-function HomePage() {
+const HomePage = () => {
   return (
     <div>
       <p>Add new entry</p>
@@ -26,6 +26,6 @@ function HomePage() {
       </DisplayTableData>
     </div>
   );
-}
+};
 
 export default HomePage;
