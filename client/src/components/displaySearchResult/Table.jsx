@@ -1,22 +1,20 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "../../context/Provider";
+import { TableContext } from "./DisplayTableData";
 
 const Table = () => {
   //TODO: add style to display table
-  const context = useContext(GlobalContext);
-  console.log(context);
+  const { renderTabledata } = useContext(TableContext);
+
   return (
-    <table>
+    <table border="solid 1px">
       <thead>
         <tr>
-          <th>hallo</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>world now</td>
-        </tr>
-      </tbody>
+      <tbody>{renderTabledata()}</tbody>
     </table>
   );
 };

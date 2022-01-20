@@ -14,6 +14,7 @@ const InputField = () => {
     <input
       type="text"
       value={value}
+      required
       onChange={(e) => setValue(e.target.value)}
     />
   );

@@ -16,24 +16,27 @@ const SearchField = ({ children }) => {
     searchState: { data },
   } = useContext(GlobalContext);
 
-  //TODO: make this in its own file code splitting
+  //TODO: make this in its own file => code splitting
   const searchForEntries = () => {
-    data.filter((res) => {
-      const { firstName, lastName, phoneNumber } = res;
+    if (value !== "") {
+      const filterData = data.filter((res) => {
+        const { firstName, lastName, phoneNumber } = res;
 
-      const search =
-        firstName.includes(value) ||
-        lastName.includes(value) ||
-        phoneNumber.includes(value);
+        const search =
+          firstName.includes(value) ||
+          lastName.includes(value) ||
+          phoneNumber.includes(value);
 
-      if (search) {
-        dispatch({
-          type: GET_SEARCH_RESULT_FOR_TABLE,
-          payload: { tableData: res },
-        });
-      }
-      return true;
-    });
+        if (search) {
+          return res;
+        }
+      });
+
+      dispatch({
+        type: GET_SEARCH_RESULT_FOR_TABLE,
+        payload: { tableData: filterData },
+      });
+    }
   };
 
   //Send fetch request to backend server
