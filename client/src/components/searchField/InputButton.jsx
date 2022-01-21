@@ -10,7 +10,11 @@ const InputButton = ({ children }) => {
 
   const { searchForEntries } = context;
 
-  return <button onClick={searchForEntries}>{children}</button>;
+  return (
+    <button className="" onClick={searchForEntries}>
+      {children}
+    </button>
+  );
 };
 
 export default InputButton;

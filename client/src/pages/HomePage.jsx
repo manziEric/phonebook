@@ -10,12 +10,15 @@ import SearchField from "../components/searchField/SearchField";
 //TODO: create grid for table and searchfield
 //TODO: set link to other pages
 //TODO: search on type
+//TODO: render Table on search
 
 const HomePage = () => {
   return (
-    <div>
-      <p>Add new entry</p>
-
+    <div className="container">
+      <div>
+        <Link to="/newentry">Add new Entry</Link>
+      </div>
+      <br />
       <SearchField>
         <InputField />
         <InputButton>Search</InputButton>

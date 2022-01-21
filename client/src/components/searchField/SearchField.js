@@ -1,6 +1,5 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
 import axios from "axios";
-import DisplayTableData from "../displaySearchResult/DisplayTableData";
 import { GlobalContext } from "../../context/Provider";
 import {
   GET_SEARCH_RESULT_FOR_TABLE,
@@ -16,7 +15,7 @@ const SearchField = ({ children }) => {
     searchState: { data },
   } = useContext(GlobalContext);
 
-  //TODO: make this in its own file => code splitting
+  //TODO: make this in its own js file => code splitting
   const searchForEntries = () => {
     if (value !== "") {
       const filterData = data.filter((res) => {
