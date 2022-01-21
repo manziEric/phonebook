@@ -1,13 +1,6 @@
-import React, { useContext } from "react";
-import { FormContext } from "./FormEntry";
+import React from "react";
 
 const FormButton = () => {
-  const context = useContext(FormContext);
-
-  if (!context) {
-    throw new Error("FormButton should be called in Form");
-  }
-
   return <input type="submit" className="" />;
 };
 
