@@ -6,8 +6,6 @@ import { FormEntry } from "../components/formEntry/FormEntry";
 import FormInput from "../components/formEntry/FormInput";
 import FormLabel from "../components/formEntry/FormLabel";
 
-//TODO: style form
-
 const AddNewEntryPage = () => {
   return (
     <div className="container">
@@ -20,13 +18,13 @@ const AddNewEntryPage = () => {
       <FormEntry>
         <Form>
           <FormLabel>First Name</FormLabel>
-          <FormInput />
+          <FormInput name={"firstName"} />
           <br />
           <FormLabel>Last Name</FormLabel>
-          <FormInput />
+          <FormInput name={"lastName"} />
           <br />
           <FormLabel>Phone Number</FormLabel>
-          <FormInput />
+          <FormInput name={"phoneNumber"} />
           <br />
           <FormButton>Submit</FormButton>
         </Form>

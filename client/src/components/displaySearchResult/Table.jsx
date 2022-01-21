@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { TableContext } from "./DisplayTableData";
 
 const Table = () => {
-  //TODO: add style to display table
   const { renderTabledata } = useContext(TableContext);
 
   return (

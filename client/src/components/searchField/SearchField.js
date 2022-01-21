@@ -15,7 +15,6 @@ const SearchField = ({ children }) => {
     searchState: { data },
   } = useContext(GlobalContext);
 
-  //TODO: make this in its own js file => code splitting
   const searchForEntries = () => {
     if (value !== "") {
       const filterData = data.filter((res) => {
@@ -49,7 +48,6 @@ const SearchField = ({ children }) => {
           payload: { data: serverData.data },
         });
       }
-      //TODO: dispatch error
     };
 
     fetchDataFromServer();

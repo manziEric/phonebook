@@ -1,12 +1,26 @@
-import React, { createContext, useState } from "react";
+import axios from "axios";
+import React, { createContext } from "react";
 
 export const FormContext = createContext();
 
 export const FormEntry = ({ children }) => {
-  const [value, setValue] = useState("");
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    const firstName = e.target.firstName.value;
+    const lastName = e.target.lastName.value;
+    const phoneNumber = e.target.phoneNumber.value;
+
+    const postNewEntryToServer = { firstName, lastName, phoneNumber };
+
+    const postDataToServer = async () => {
+      await axios.post("/api/phonenumbers/createEntry", postNewEntryToServer);
+    };
+    postDataToServer();
+  };
 
   return (
-    <FormContext.Provider value={{ value, setValue }}>
+    <FormContext.Provider value={{ handleFormSubmit }}>
       {children}
     </FormContext.Provider>
   );

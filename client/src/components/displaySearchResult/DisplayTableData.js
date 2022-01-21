@@ -3,8 +3,6 @@ import { GlobalContext } from "../../context/Provider";
 
 export const TableContext = createContext();
 
-//TODO: add link to the "edit this entry" page
-
 const DisplayTableData = ({ children }) => {
   const {
     searchState: { tableData = [] },

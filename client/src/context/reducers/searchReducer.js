@@ -10,6 +10,7 @@ const searchReducer = (state, action) => {
       return { ...state, data };
     case GET_SEARCH_RESULT_FOR_TABLE:
       return { ...state, tableData, displayTable: true };
+
     default:
       return state;
   }
