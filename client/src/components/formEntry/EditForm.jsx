@@ -1,22 +1,20 @@
 import React, { useContext } from "react";
 import { FormContext } from "./FormEntry";
 
-const Form = ({ children }) => {
+const EditForm = ({ children }) => {
   const context = useContext(FormContext);
-
-  console.log(context);
 
   if (!context) {
     throw new Error("FormButton should be called in Form");
   }
 
-  const { handleFormSubmit } = context;
+  const { handleEditFormSubmit } = context;
 
   return (
-    <form className="" onSubmit={handleFormSubmit}>
+    <form className="" onSubmit={handleEditFormSubmit}>
       {children}
     </form>
   );
 };
 
-export default Form;
+export default EditForm;

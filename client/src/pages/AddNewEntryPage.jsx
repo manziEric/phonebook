@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Form from "../components/formEntry/Form";
+import CreateForm from "../components/formEntry/CreateForm";
 import FormButton from "../components/formEntry/FormButton";
 import { FormEntry } from "../components/formEntry/FormEntry";
 import FormInput from "../components/formEntry/FormInput";
@@ -16,7 +16,7 @@ const AddNewEntryPage = () => {
       <br />
       <p>Create new Entry</p>
       <FormEntry>
-        <Form>
+        <CreateForm>
           <FormLabel>First Name</FormLabel>
           <FormInput name={"firstName"} />
           <br />
@@ -27,7 +27,7 @@ const AddNewEntryPage = () => {
           <FormInput name={"phoneNumber"} />
           <br />
           <FormButton>Submit</FormButton>
-        </Form>
+        </CreateForm>
       </FormEntry>
     </div>
   );

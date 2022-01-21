@@ -11,6 +11,7 @@ const Table = () => {
           <th>First Name</th>
           <th>Last Name</th>
           <th>Phone Number</th>
+          <th>Edit Entry</th>
         </tr>
       </thead>
       <tbody>{renderTabledata()}</tbody>
