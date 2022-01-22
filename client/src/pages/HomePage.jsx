@@ -7,11 +7,10 @@ import SearchField from "../components/searchField/SearchField";
 import { GlobalContext } from "../context/Provider";
 
 //TODO:[x] Validate phone number if it start with example +32...
-
 //TODO:[] Create grid for table and searchfield in home.Page.jsx
 //TODO:[x] Set link to other pages in HomePage, AddNewEntryPage, and EditEntryPage
 //TODO:[x] Search on type in SearchField.js
-//TODO:[] Render Table on search in HomePage.jsx
+//TODO:[x] Render Table on search in HomePage.jsx
 
 //TODO:[] Make Input reusable component
 
