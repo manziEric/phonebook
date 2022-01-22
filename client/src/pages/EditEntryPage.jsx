@@ -5,6 +5,7 @@ import FormButton from "../components/formEntry/FormButton";
 import { FormEntry } from "../components/formEntry/FormEntry";
 import FormInput from "../components/formEntry/FormInput";
 import FormLabel from "../components/formEntry/FormLabel";
+import FormPhoneNumberInput from "../components/formEntry/FormPhoneNumberInput";
 import { GlobalContext } from "../context/Provider";
 
 const EditEntryPage = () => {
@@ -40,10 +41,9 @@ const EditEntryPage = () => {
           />
           <br />
           <FormLabel>Phone Number</FormLabel>
-          <FormInput
+          <FormPhoneNumberInput
             name={"phoneNumber"}
             placeholder={phoneNumber}
-            required={false}
           />
           <br />
           <FormButton>Submit</FormButton>

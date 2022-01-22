@@ -26,7 +26,7 @@ phoneNumberRouter.put("/:id", async (req, res) => {
   if (phoneNumber) {
     phoneNumber.firstName = req.body.firstName;
     phoneNumber.lastName = req.body.lastName;
-    phoneNumber.phoneNumer = req.body.phoneNumer;
+    phoneNumber.phoneNumber = req.body.phoneNumber;
 
     const updatePhoneNumbers = await phoneNumber.save();
     res.send({ message: "Entry edited", phoneNumber: updatePhoneNumbers });

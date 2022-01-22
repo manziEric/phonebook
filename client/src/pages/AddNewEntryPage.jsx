@@ -5,6 +5,7 @@ import FormButton from "../components/formEntry/FormButton";
 import { FormEntry } from "../components/formEntry/FormEntry";
 import FormInput from "../components/formEntry/FormInput";
 import FormLabel from "../components/formEntry/FormLabel";
+import FormPhoneNumberInput from "../components/formEntry/FormPhoneNumberInput";
 
 const AddNewEntryPage = () => {
   return (
@@ -24,7 +25,7 @@ const AddNewEntryPage = () => {
           <FormInput name={"lastName"} />
           <br />
           <FormLabel>Phone Number</FormLabel>
-          <FormInput name={"phoneNumber"} />
+          <FormPhoneNumberInput name={"phoneNumber"} />
           <br />
           <FormButton>Submit</FormButton>
         </CreateForm>

@@ -38,6 +38,7 @@ const DisplayTableData = ({ children }) => {
       </tr>
     ));
   };
+
   return (
     <TableContext.Provider value={{ renderTabledata }}>
       {children}
