@@ -8,14 +8,14 @@ const InputField = () => {
     throw new Error("InputField should be called in SearchField");
   }
 
-  const { value, setValue } = context;
+  const { searchForEntries } = context;
 
   return (
     <input
       type="text"
-      value={value}
       required
-      onChange={(e) => setValue(e.target.value)}
+      placeholder="Search for entry"
+      onChange={(e) => searchForEntries(e.target.value)}
     />
   );
 };

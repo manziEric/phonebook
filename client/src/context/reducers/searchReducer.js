@@ -10,7 +10,11 @@ const searchReducer = (state, action) => {
     case GET_SEARCH_RESULT_FROM_SERVER:
       return { ...state, data };
     case GET_SEARCH_RESULT_FOR_TABLE:
-      return { ...state, tableData, displayTable: true };
+      let displayTable = true;
+      if (tableData.length === 0) {
+        displayTable = false;
+      }
+      return { ...state, tableData, displayTable };
     case EDIT_ENTRY_RESULT:
       return { ...state, editEntryResult };
     default:

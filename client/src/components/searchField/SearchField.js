@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext } from "react";
+import React, { useEffect, createContext, useContext } from "react";
 import axios from "axios";
 import { GlobalContext } from "../../context/Provider";
 import {
@@ -9,35 +9,31 @@ import {
 export const SearchContext = createContext(null);
 
 const SearchField = ({ children }) => {
-  const [value, setValue] = useState("");
   const {
     dispatch,
     searchState: { data },
   } = useContext(GlobalContext);
 
-  const searchForEntries = () => {
-    if (value !== "") {
-      const filterData = data.filter((res) => {
-        const { firstName, lastName, phoneNumber } = res;
+  const searchForEntries = (e) => {
+    const filterData = data.filter((res) => {
+      const { firstName, lastName, phoneNumber } = res;
 
-        const search =
-          firstName.includes(value) ||
-          lastName.includes(value) ||
-          phoneNumber.includes(value);
+      const search =
+        firstName.includes(e) ||
+        lastName.includes(e) ||
+        phoneNumber.includes(e);
 
-        if (search) {
-          return res;
-        }
-      });
+      if (search && e !== "") {
+        return res;
+      }
+    });
 
-      dispatch({
-        type: GET_SEARCH_RESULT_FOR_TABLE,
-        payload: { tableData: filterData },
-      });
-    }
+    dispatch({
+      type: GET_SEARCH_RESULT_FOR_TABLE,
+      payload: { tableData: filterData },
+    });
   };
 
-  //Send fetch request to backend server
   useEffect(() => {
     const fetchDataFromServer = async () => {
       const serverData = await axios.get("/api/phonenumbers");
@@ -56,8 +52,6 @@ const SearchField = ({ children }) => {
   return (
     <SearchContext.Provider
       value={{
-        value,
-        setValue,
         searchForEntries,
       }}
     >
