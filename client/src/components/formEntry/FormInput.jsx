@@ -1,10 +1,10 @@
 import React from "react";
 
-const FormInput = ({ name, placeholder, required = true }) => {
+const FormInput = ({ type = "text", name, placeholder, required = true }) => {
   return (
     <input
       className=""
-      type="text"
+      type={type}
       required={required}
       name={name}
       placeholder={placeholder}

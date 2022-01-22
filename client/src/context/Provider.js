@@ -6,6 +6,11 @@ export const GlobalContext = createContext({});
 const initialState = {
   searchResult: [],
   displayTable: false,
+  editEntryResult: {
+    firstName: null,
+    lastName: null,
+    phoneNumber: null,
+  },
 };
 
 export const GlobalProvider = ({ children }) => {
