@@ -44,6 +44,7 @@ const EditEntryPage = () => {
           <FormPhoneNumberInput
             name={"phoneNumber"}
             placeholder={phoneNumber}
+            required={false}
           />
           <br />
           <FormButton>Submit</FormButton>

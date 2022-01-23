@@ -2,7 +2,7 @@ import React from "react";
 import NumberFormat from "react-number-format";
 import PropTypes from "prop-types";
 
-const FormPhoneNumberInput = ({ name, placeholder }) => {
+const FormPhoneNumberInput = ({ name, placeholder, required }) => {
   return (
     <NumberFormat
       type="tel"
@@ -10,7 +10,7 @@ const FormPhoneNumberInput = ({ name, placeholder }) => {
       format="+## ## ######"
       placeholder={placeholder}
       mask="_"
-      required
+      required={required}
     />
   );
 };
@@ -24,4 +24,5 @@ FormPhoneNumberInput.propTypes = {
 
 FormPhoneNumberInput.defaultProps = {
   placeholder: "+39 02 1234567",
+  required: true,
 };

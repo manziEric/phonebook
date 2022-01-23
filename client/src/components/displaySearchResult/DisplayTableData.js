@@ -1,43 +1,12 @@
 import React, { createContext, useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { EDIT_ENTRY_RESULT } from "../../context/constants";
-import { GlobalContext } from "../../context/Provider";
+import useHandleEditEntryClick from "./useHandleEditEntryClick";
+import useRenderTableData from "./useRenderTableData";
 
 export const TableContext = createContext();
 
 const DisplayTableData = ({ children }) => {
-  const navigate = useNavigate();
-  const {
-    dispatch,
-    searchState: { tableData = [] },
-  } = useContext(GlobalContext);
-
-  const handleEditEntryClick = (_id, firstName, lastName, phoneNumber) => {
-    dispatch({
-      type: EDIT_ENTRY_RESULT,
-      payload: { editEntryResult: { _id, firstName, lastName, phoneNumber } },
-    });
-    navigate("/editentry");
-  };
-
-  const renderTabledata = () => {
-    return tableData.map(({ _id, firstName, lastName, phoneNumber }) => (
-      <tr key={_id}>
-        <td>{firstName}</td>
-        <td>{lastName}</td>
-        <td>{phoneNumber}</td>
-        <td>
-          <button
-            onClick={() =>
-              handleEditEntryClick(_id, firstName, lastName, phoneNumber)
-            }
-          >
-            Edit Entry
-          </button>
-        </td>
-      </tr>
-    ));
-  };
+  const [handleEditEntryClick] = useHandleEditEntryClick();
+  const [renderTabledata] = useRenderTableData({ handleEditEntryClick });
 
   return (
     <TableContext.Provider value={{ renderTabledata }}>
