@@ -10,7 +10,7 @@ import { iconBox, typeGraphDesktop, typeGraphMobile } from "./navbar.style";
 
 const Navbar = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" className="navbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography variant="h6" noWrap component="div" sx={typeGraphDesktop}>

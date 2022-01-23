@@ -13,6 +13,7 @@ const InputField = () => {
   return (
     <input
       type="text"
+      name="search"
       required
       placeholder="Search for entry"
       onChange={(e) => searchForEntries(e.target.value)}

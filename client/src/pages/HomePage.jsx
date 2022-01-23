@@ -22,6 +22,7 @@ import { GlobalContext } from "../context/Provider";
 //TODO:[] Make searchForEntries in SearchField.js its own js file => code splitting
 //TODO:[] Add dispatch error in fetchDataFromServer function in SearchField.js
 //TODO:[] Clear data after Form submit
+//TODO:[] after edit entry send back to home page
 
 const HomePage = () => {
   const {
