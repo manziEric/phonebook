@@ -12,17 +12,17 @@ import { GlobalContext } from "../context/Provider";
 //TODO:[x] Search on type in SearchField.js
 //TODO:[x] Render Table on search in HomePage.jsx
 
-//TODO:[] Make Input reusable component
+//TODO:[x] Make Input reusable component
 
 //TODO:[] Style form in AddNewEntryPage.jsx
 //TODO:[x] Add link to the "edit this entry" page in DisplayTableData.js
 //TODO:[] Add style to display table in Table.jsx
 //TODO:[] Romeve border style in Table.jsx
 
-//TODO:[] Make searchForEntries in SearchField.js its own js file => code splitting
+//TODO:[x] Make searchForEntries in SearchField.js its own js file => code splitting
 //TODO:[] Add dispatch error in fetchDataFromServer function in SearchField.js
-//TODO:[] Clear data after Form submit
-//TODO:[] after edit entry send back to home page
+//TODO:[x] Clear data after Form submit
+//TODO:[x] after edit entry send back to home page
 
 const HomePage = () => {
   const {

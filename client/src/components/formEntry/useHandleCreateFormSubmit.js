@@ -1,7 +1,9 @@
 import axios from "axios";
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const useHandleCreateFormSubmit = () => {
+  const navigate = useNavigate();
+
   const handleCreateFormSubmit = (e) => {
     e.preventDefault();
 
@@ -13,6 +15,7 @@ const useHandleCreateFormSubmit = () => {
 
     const postDataToServer = async () => {
       await axios.post("/api/phonenumbers/createEntry", postNewEntryToServer);
+      navigate("/");
     };
     postDataToServer();
   };

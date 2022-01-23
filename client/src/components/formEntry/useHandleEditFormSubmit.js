@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import _ from "lodash";
 import { GlobalContext } from "../../context/Provider";
 
 const useHandleEditFormSubmit = () => {
+  const navigate = useNavigate();
   const {
     searchState: {
       editEntryResult: { _id, firstName, lastName, phoneNumber },
@@ -39,7 +41,9 @@ const useHandleEditFormSubmit = () => {
     ) {
       const postDataToServer = async () => {
         await axios.put(`/api/phonenumbers/${_id}`, postNewEntryToServer);
+        navigate("/");
       };
+
       postDataToServer();
     }
   };
