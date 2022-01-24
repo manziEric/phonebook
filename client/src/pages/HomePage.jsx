@@ -7,24 +7,6 @@ import SearchField from "../components/searchField/SearchField";
 import { GlobalContext } from "../context/Provider";
 import "../styles/HomePage.css";
 
-//TODO:[x] Validate phone number if it start with example +32...
-//TODO:[] Create grid for table and searchfield in home.Page.jsx
-//TODO:[x] Set link to other pages in HomePage, AddNewEntryPage, and EditEntryPage
-//TODO:[x] Search on type in SearchField.js
-//TODO:[x] Render Table on search in HomePage.jsx
-
-//TODO:[x] Make Input reusable component
-
-//TODO:[] Style form in AddNewEntryPage.jsx
-//TODO:[x] Add link to the "edit this entry" page in DisplayTableData.js
-//TODO:[] Add style to display table in Table.jsx
-//TODO:[] Romeve border style in Table.jsx
-
-//TODO:[x] Make searchForEntries in SearchField.js its own js file => code splitting
-//TODO:[] Add dispatch error in fetchDataFromServer function in SearchField.js
-//TODO:[x] Clear data after Form submit
-//TODO:[x] after edit entry send back to home page
-
 const HomePage = () => {
   const {
     searchState: { displayTable },
@@ -32,10 +14,10 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <div>
+      <div className="links">
         <Link to="/newentry">Add new Entry</Link>
       </div>
-      <br />
+
       <SearchField>
         <InputField />
       </SearchField>

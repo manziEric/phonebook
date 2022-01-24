@@ -21,13 +21,13 @@ const AddNewEntryPage = () => {
         <CreateForm>
           <FormLabel name={firstName}>First Name</FormLabel>
           <FormInput name={firstName} />
-          <br />
+
           <FormLabel name={lastName}>Last Name</FormLabel>
           <FormInput name={lastName} />
-          <br />
+
           <FormLabel name={phoneNumber}>Phone Number</FormLabel>
           <FormPhoneNumberInput name={phoneNumber} />
-          <br />
+
           <FormButton>Submit</FormButton>
         </CreateForm>
       </FormEntry>
