@@ -26,7 +26,9 @@ const EditEntryPage = () => {
         <Link to="/">Home page</Link>
         <Link to="/newentry">Add new Entry</Link>
       </div>
+
       <p>Edit Entry</p>
+
       <FormEntry>
         <EditForm>
           <FormLabel name={setFirstName}>First Name</FormLabel>
@@ -35,21 +37,18 @@ const EditEntryPage = () => {
             placeholder={firstName}
             required={false}
           />
-
           <FormLabel name={setLastName}>Last Name</FormLabel>
           <FormInput
             name={setLastName}
             placeholder={lastName}
             required={false}
           />
-
           <FormLabel name={setPhoneNumber}>Phone Number</FormLabel>
           <FormPhoneNumberInput
             name={setPhoneNumber}
             placeholder={phoneNumber}
             required={false}
           />
-
           <FormButton>Submit</FormButton>
         </EditForm>
       </FormEntry>

@@ -11,7 +11,7 @@ const CreateForm = ({ children }) => {
   const { handleCreateFormSubmit } = context;
 
   return (
-    <form className="" onSubmit={handleCreateFormSubmit}>
+    <form className="form" onSubmit={handleCreateFormSubmit}>
       {children}
     </form>
   );

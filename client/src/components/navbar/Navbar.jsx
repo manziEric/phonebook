@@ -16,7 +16,6 @@ const Navbar = () => {
           <Typography variant="h6" noWrap component="div" sx={typeGraphDesktop}>
             Phonebook
           </Typography>
-
           <Box sx={iconBox}>
             <IconButton
               size="large"

@@ -4,8 +4,6 @@ import { createMemoryHistory } from "history";
 import { Router } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import { GlobalProvider } from "./context/Provider";
-import EditEntryPage from "./pages/EditEntryPage";
-import AddNewEntryPage from "./pages/AddNewEntryPage";
 
 describe("App testing the routes", () => {
   it("the page should route the HomePage", () => {

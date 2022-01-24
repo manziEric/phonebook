@@ -21,6 +21,7 @@ const HomePage = () => {
       <SearchField>
         <InputField />
       </SearchField>
+
       {displayTable ? (
         <DisplayTableData>
           <Table />

@@ -11,7 +11,7 @@ const EditForm = ({ children }) => {
   const { handleEditFormSubmit } = context;
 
   return (
-    <form className="" onSubmit={handleEditFormSubmit}>
+    <form className="form" onSubmit={handleEditFormSubmit}>
       {children}
     </form>
   );

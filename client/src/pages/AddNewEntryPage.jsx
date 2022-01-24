@@ -16,18 +16,17 @@ const AddNewEntryPage = () => {
       <div className="links">
         <Link to="/">Home page</Link>
       </div>
+
       <p>Create new Entry</p>
+
       <FormEntry>
         <CreateForm>
           <FormLabel name={firstName}>First Name</FormLabel>
           <FormInput name={firstName} />
-
           <FormLabel name={lastName}>Last Name</FormLabel>
           <FormInput name={lastName} />
-
           <FormLabel name={phoneNumber}>Phone Number</FormLabel>
           <FormPhoneNumberInput name={phoneNumber} />
-
           <FormButton>Submit</FormButton>
         </CreateForm>
       </FormEntry>
