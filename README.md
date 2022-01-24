@@ -4,13 +4,33 @@ This is a project about searching for phone number in a monogdb data base
 
 ## `Clone the repository`
 
-clone the repository to your machine. And go to your folder.
+clone the repository to your machine.
 
 Open a terminal and run the following git command:
 
 ```
 git clone "https://github.com/manziEric/phonebook.git"
 ```
+
+1.  Go to the root of the project folder and run the following command:
+
+```
+npm i
+```
+
+2.  Go to the server folder and run the following command:
+
+```
+npm i
+```
+
+3.  Go to the client folder and run the following command:
+
+```
+npm i
+```
+
+npm will install al the dependencies
 
 ### `Setup the server`
 
@@ -24,7 +44,7 @@ machine.
 MONGODB_LOCALHOST=mongodb://localhost/
 ```
 
-If you dont have mongodb you can install it from this link "https://www.mongodb.com/try/download/community"
+If you dont have mongodb you can install it from this link https://www.mongodb.com/try/download/community
 
 If you have mongodb on your local machine make sure it is running
 
@@ -38,7 +58,7 @@ If mongodb is not running you can start mongodb with the following command
 service mongod start
 ```
 
-If you want mongodb GUI you can install it from this link "https://www.mongodb.com/products/compass"
+If you want mongodb GUI you can install it from this link https://www.mongodb.com/products/compass
 
 After mongodb is up and running you can start the app
 
@@ -52,7 +72,7 @@ npm start
 ```
 
 Then the server will run in the development mode.\
-Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
+On [http://localhost:5000](http://localhost:5000)
 
 After this go to the client folder and run the following command
 
@@ -65,7 +85,6 @@ Then the app will run in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `test app`
 
