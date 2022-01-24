@@ -87,7 +87,7 @@ The page will reload when you make changes.\
 
 ### `test app`
 
-To run all the tests in this project go to the client folder and run the following command:
+To run all the tests in this project go to the client src folder and run the following command:
 
 ```
 npm test
