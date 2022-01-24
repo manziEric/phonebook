@@ -8,24 +8,25 @@ import FormLabel from "../components/formEntry/FormLabel";
 import FormPhoneNumberInput from "../components/formEntry/FormPhoneNumberInput";
 
 const AddNewEntryPage = () => {
+  const firstName = "firstName";
+  const lastName = "lastName";
+  const phoneNumber = "phoneNumber";
   return (
     <div className="container">
-      <div>
+      <div className="links">
         <Link to="/">Home page</Link>
       </div>
-
-      <br />
       <p>Create new Entry</p>
       <FormEntry>
         <CreateForm>
-          <FormLabel>First Name</FormLabel>
-          <FormInput name={"firstName"} />
+          <FormLabel name={firstName}>First Name</FormLabel>
+          <FormInput name={firstName} />
           <br />
-          <FormLabel>Last Name</FormLabel>
-          <FormInput name={"lastName"} />
+          <FormLabel name={lastName}>Last Name</FormLabel>
+          <FormInput name={lastName} />
           <br />
-          <FormLabel>Phone Number</FormLabel>
-          <FormPhoneNumberInput name={"phoneNumber"} />
+          <FormLabel name={phoneNumber}>Phone Number</FormLabel>
+          <FormPhoneNumberInput name={phoneNumber} />
           <br />
           <FormButton>Submit</FormButton>
         </CreateForm>

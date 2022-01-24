@@ -5,6 +5,7 @@ import Table from "../components/displaySearchResult/Table";
 import InputField from "../components/searchField/InputField";
 import SearchField from "../components/searchField/SearchField";
 import { GlobalContext } from "../context/Provider";
+import "../styles/HomePage.css";
 
 //TODO:[x] Validate phone number if it start with example +32...
 //TODO:[] Create grid for table and searchfield in home.Page.jsx

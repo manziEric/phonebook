@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import AddNewEntryPage from "./pages/AddNewEntryPage";
 import EditEntryPage from "./pages/EditEntryPage";
 import HomePage from "./pages/HomePage";
+import "./App.css";
 
 function App() {
   return (

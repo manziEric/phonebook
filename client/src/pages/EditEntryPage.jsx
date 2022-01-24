@@ -7,6 +7,7 @@ import FormInput from "../components/formEntry/FormInput";
 import FormLabel from "../components/formEntry/FormLabel";
 import FormPhoneNumberInput from "../components/formEntry/FormPhoneNumberInput";
 import { GlobalContext } from "../context/Provider";
+import "../styles/EditEntryPage.css";
 
 const EditEntryPage = () => {
   const {
@@ -17,7 +18,7 @@ const EditEntryPage = () => {
 
   return (
     <div className="container">
-      <div>
+      <div className="links">
         <Link to="/">Home page</Link>
         <Link to="/newentry">Add new Entry</Link>
       </div>
@@ -26,23 +27,19 @@ const EditEntryPage = () => {
       <p>Edit Entry</p>
       <FormEntry>
         <EditForm>
-          <FormLabel>First Name</FormLabel>
+          <FormLabel name={firstName}>First Name</FormLabel>
           <FormInput
-            name={"firstName"}
+            name={firstName}
             placeholder={firstName}
             required={false}
           />
           <br />
-          <FormLabel>Last Name</FormLabel>
-          <FormInput
-            name={"lastName"}
-            placeholder={lastName}
-            required={false}
-          />
+          <FormLabel name={lastName}>Last Name</FormLabel>
+          <FormInput name={lastName} placeholder={lastName} required={false} />
           <br />
-          <FormLabel>Phone Number</FormLabel>
+          <FormLabel name={phoneNumber}>Phone Number</FormLabel>
           <FormPhoneNumberInput
-            name={"phoneNumber"}
+            name={phoneNumber}
             placeholder={phoneNumber}
             required={false}
           />

@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { TableContext } from "./DisplayTableData";
+import "../../styles/Table.css";
 
 const Table = () => {
   const { renderTabledata } = useContext(TableContext);
 
   return (
-    <table border="solid 1px">
+    <table className="table">
       <thead>
         <tr>
           <th>First Name</th>

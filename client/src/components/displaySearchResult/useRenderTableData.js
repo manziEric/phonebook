@@ -14,6 +14,7 @@ const useRenderTableData = ({ handleEditEntryClick }) => {
         <td>{phoneNumber}</td>
         <td>
           <button
+            className="table_button"
             onClick={() =>
               handleEditEntryClick(_id, firstName, lastName, phoneNumber)
             }

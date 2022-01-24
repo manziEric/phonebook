@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const FormInput = ({ name, placeholder, required = true }) => {
+const FormInput = ({ name, placeholder, required }) => {
   return (
     <input
       className="FormInput"
@@ -19,4 +19,8 @@ FormInput.propTypes = {
   name: PropTypes.string,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
+};
+
+FormInput.defaultProps = {
+  required: true,
 };
