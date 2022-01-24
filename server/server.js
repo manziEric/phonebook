@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGODB_LOCALHOST)
   .then(() => {
     console.log("connected to db");
   })
