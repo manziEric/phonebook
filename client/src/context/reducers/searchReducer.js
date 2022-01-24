@@ -11,7 +11,7 @@ const searchReducer = (state, action) => {
       return { ...state, data };
     case GET_SEARCH_RESULT_FOR_TABLE:
       let displayTable = true;
-      if (tableData.length === 0) {
+      if (tableData?.length === 0) {
         displayTable = false;
       }
       return { ...state, tableData, displayTable };

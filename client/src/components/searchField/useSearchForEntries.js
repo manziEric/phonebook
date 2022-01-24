@@ -9,7 +9,7 @@ const useSearchForEntries = () => {
   } = useContext(GlobalContext);
 
   const searchForEntries = (e) => {
-    const filterData = data.filter((res) => {
+    const filterData = data?.filter((res) => {
       const { firstName, lastName, phoneNumber } = res;
 
       const search =
