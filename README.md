@@ -38,7 +38,7 @@ This app runs with a mongodb server. So make sure that you have mongodb on you l
 machine.
 
 1. Go to the server folder in this project and create a .env file.
-2. Put in the .env file the following command
+2. Put in the .env file the following command:
 
 ```
 MONGODB_LOCALHOST=mongodb://localhost/
@@ -52,7 +52,7 @@ If you have mongodb on your local machine make sure it is running
 service mongod status
 ```
 
-If mongodb is not running you can start mongodb with the following command
+If mongodb is not running you can start mongodb with the following command:
 
 ```
 service mongod start
@@ -64,17 +64,16 @@ After mongodb is up and running you can start the app
 
 ### `start app`
 
-Go to the server folder and run the following command
+Go to the server folder and run the following command:
 
 ```
 npm start
 
 ```
 
-Then the server will run in the development mode.\
-On [http://localhost:5000](http://localhost:5000)
+Then the server will run in the development mode on port [http://localhost:5000](http://localhost:5000)
 
-After this go to the client folder and run the following command
+After this go to the client folder and run the following command:
 
 ```
 npm start
@@ -88,7 +87,7 @@ The page will reload when you make changes.\
 
 ### `test app`
 
-After this go to the client folder and run the following command
+To run all the tests in this project go to the client folder and run the following command:
 
 ```
 npm test
@@ -96,7 +95,7 @@ npm test
 ```
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See this section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ## License
 
