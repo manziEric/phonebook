@@ -16,6 +16,10 @@ const EditEntryPage = () => {
     },
   } = useContext(GlobalContext);
 
+  const setFirstName = "firstName";
+  const setLastName = "lastName";
+  const setPhoneNumber = "phoneNumber";
+
   return (
     <div className="container">
       <div className="links">
@@ -27,19 +31,23 @@ const EditEntryPage = () => {
       <p>Edit Entry</p>
       <FormEntry>
         <EditForm>
-          <FormLabel name={firstName}>First Name</FormLabel>
+          <FormLabel name={setFirstName}>First Name</FormLabel>
           <FormInput
-            name={firstName}
+            name={setFirstName}
             placeholder={firstName}
             required={false}
           />
           <br />
-          <FormLabel name={lastName}>Last Name</FormLabel>
-          <FormInput name={lastName} placeholder={lastName} required={false} />
+          <FormLabel name={setLastName}>Last Name</FormLabel>
+          <FormInput
+            name={setLastName}
+            placeholder={lastName}
+            required={false}
+          />
           <br />
-          <FormLabel name={phoneNumber}>Phone Number</FormLabel>
+          <FormLabel name={setPhoneNumber}>Phone Number</FormLabel>
           <FormPhoneNumberInput
-            name={phoneNumber}
+            name={setPhoneNumber}
             placeholder={phoneNumber}
             required={false}
           />
